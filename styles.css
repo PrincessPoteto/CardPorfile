@@ -1,0 +1,102 @@
+html{
+    background-color: hsl(185, 75%, 39%);
+    }
+    html::after,
+    html::before {
+        content: '';
+        position: fixed;
+        display: block;
+        width: 100vmin;
+        height: 100vmin;
+        background-size: 100%;
+        z-index: -1;
+    }
+    html::before {
+        background-image: url('./assets/images/bg-pattern-top.svg');
+        top: -55%;
+        left: -5%;
+    }
+    html::after{
+        background-image: url('./assets/images/bg-pattern-bottom.svg');
+        bottom: -55%;
+        right: -5%;
+    }
+    body{
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        margin: 0;
+        font-family: sans-serif;
+    }
+    .card {
+        width: 340px;
+        height: 325px;
+        background-color: whitesmoke;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .card_header {
+        background-image: url(./assets/images/bg-pattern-card.svg);
+        height: 120px;
+        position: relative;
+    }
+    .card_image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+    border: 3px solid whitesmoke;
+    background-color: whitesmoke;
+    }
+    .card_body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 135px;
+    }
+    .card_text {
+        margin: 0;
+        line-height: 1.5;
+    }
+    .card_text--light {
+        color: grey;
+        font-weight: normal;
+    }
+    .card_footer {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid grey;
+    }
+    .card_stats {
+        width: 100%;
+    text-align: center;
+    }
+    .card_number {
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+    }
+    .footer {
+        position:fixed;
+        left: 0;
+        bottom: 0;
+        height: 30px;
+        margin-top: 1rem;
+        padding: 1rem 0;
+        width: 100%;
+    }
+    .attribution {
+        font-size: 10px;
+        text-align: center;
+        color: hsl(229, 23%, 23%);
+    }
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+    @media screen and (min-width: 768px) {
+        body {
+            background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+        }
+    }
